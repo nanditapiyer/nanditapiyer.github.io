@@ -1,12 +1,44 @@
 .home{
-	background: url("http://wallpapercave.com/wp/WaFOpxG.jpg");
+  background: url("http://wallpapercave.com/wp/WaFOpxG.jpg");
 }
 .about-bg{
-	background: url("http://i.imgur.com/0XjPlSP.jpg");
+  background: url("http://i.imgur.com/0XjPlSP.jpg");
 }
 
 .projects-bg{
-	background: url("http://i.imgur.com/5gWqQd5.jpg");
+  background: url("http://i.imgur.com/5gWqQd5.jpg");
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
 }
 
 div {
@@ -14,7 +46,7 @@ div {
 }
 
 html, a {
-	text-align: center ;
+  text-align: center ;
     color: #37393D;
     height: 100%;
     margin: 0;
@@ -24,15 +56,20 @@ html, a {
 }
 
 h1{
-	text-align: center ;
-		position: relative;
-    margin-top:5%;
+  text-align: center ;
+    /*position: fixed;*/
+    margin-top:15%;
 
-	font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: 700;
+    color:white;
+    /*text-shadow: -0.5px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+    /*letter-spacing: 0.05em;
+    font-size: 1.6em;
+    font-weight: 700;*/
 }
 
 h2 {
@@ -49,18 +86,41 @@ h2 {
     font-weight: 700;
 }
 
-p{
-  margin-left:5%;
-  margin-right: 5%;
-  /*margin-top:5%;*/
-  text-align: left ;
-    position: relative;
+#container {
+ /* position: relative;
+ width: 1000px;*/
+ font-family: "Times New Roman", sans-serif;
+}
 
-  font-family: 'Raleway', sans-serif;
+#introduction{
+    font-family: 'Raleway', sans-serif;
     letter-spacing: 0.05em;
     font-size: 1.1em;
     font-weight: 400;
+    color:white;
 }
+.intro{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*height: 8em;
+    width: 100%;
+    z-index:4;*/
+    font-family: 'Raleway', sans-serif;
+
+  /* bring your own prefixes */
+  /*transform: translate(-50%, -125%);*/
+}
+
+p{
+    
+ 
+ 
+
+}
+
+
 
 footer{
   position:relative;
@@ -151,16 +211,16 @@ footer{
 
 
 nav ul {
-	list-style-type: none;
-	/*text-align: center;*/
-	/*list-style: none;*/
-	overflow: hidden;
+  list-style-type: none;
+  /*text-align: center;*/
+  /*list-style: none;*/
+  overflow: hidden;
 
 }
 
 nav li {
-	font-family: "Montserrat", sans-serif;
-	list-style-type: none;
+  font-family: "Montserrat", sans-serif;
+  list-style-type: none;
    /* float: center;*/
     display: inline;
       border:hidden;
@@ -169,10 +229,10 @@ nav li {
 }
 
 nav li a {
-	
-	position: relative;
+  
+  position: relative;
 
-	font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
     /*display: inline-block;*/
     color: white;
 /*    text-align: center;
@@ -190,41 +250,27 @@ nav a:hover:not(.active) {
 
 
 #menu{
-	/*padding: 0.75em 1.25em;*/
-	min-width: 500 px;
+  /*padding: 0.75em 1.25em;*/
+  min-width: 500 px;
     display: inline-block;
     position: relative;
     text-transform: uppercase;
     border:hidden;
     background: none;
+
 }
 
 #about1{
    border-radius: 4px;
-	font-family: 'Raleway', sans-serif;
-	width:95%;
-	height: auto;
+  font-family: 'Raleway', sans-serif;
+  width:95%;
+  height: auto;
     margin: 0 auto;
     padding: 10px;
     position: relative;
 }
 
-#container {
-	position: relative;
- width: 1000px;
- /*font-family: "Times New Roman", sans-serif;*/
-}
-.intro{
-		position: absolute;
 
-
-  font-family: 'Raleway', sans-serif;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  /*transform: translate(-50%, -125%);*/
-}
 
 
 
@@ -299,9 +345,23 @@ nav a:hover:not(.active) {
   margin-right: 10%;
 
   padding-top: 2%;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.8);
   overflow:scroll;
   overflow-x:hidden;
+}
+
+.about_me{
+    font-family: 'Raleway', sans-serif;
+    /*letter-spacing: 0.05em;*/
+    font-size: 1.1em;
+    font-weight: 400;
+     text-align: left ;
+    position: relative;
+    /*margin: 5%;*/
+    margin-left:5%;
+    margin-right: 5%;
+    text-indent: 0px;
+
 }
 
 .projectBody{
